@@ -1,6 +1,3 @@
-D'accord ! Voici le texte complet ajouté à la structure HTML que tu as donnée :
-
-```html
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -106,9 +103,10 @@ D'accord ! Voici le texte complet ajouté à la structure HTML que tu as donnée
             <li>❌ Augmentation du prix des matières premières : -3 💰</li>
             <li>❌ Greenwashing détecté : -3 ⭐</li>
         </ul>
-
+        
         <h2 id="quizz">🌱 + 🌍 Quizz</h2>
         <p>Facile : ♻️ Moyen : 🌍 Difficile :</p>
+        <a href="http://127.0.0.1:5500/index.html">CLique ici</a>
 
         <h2 id="victoire">🏆 Fin de la partie et victoire</h2>
         <p>🎯 Le premier joueur qui atteint ces objectifs remporte la partie !</p>
@@ -127,6 +125,70 @@ D'accord ! Voici le texte complet ajouté à la structure HTML que tu as donnée
 
         <p>Prêt à relever le défi ? 🚀✨</p>
     </div>
+
+      <!-- Bouton pour ouvrir la boîte d'aide -->
+    <button class="help-btn" onclick="openHelp()">Aide</button>
+
+    <!-- La boîte d'aide -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelp()">&times;</span>
+            <h2>Bonjour, comment puis-je vous aider ? 🤔</h2>
+            <p>Écrivez votre demande ci-dessous :</p>
+
+            <!-- Champ de texte -->
+            <textarea id="userQuestion" placeholder="Tapez votre question ici..."></textarea>
+
+            <!-- Bouton Envoyer -->
+            <button class="send-btn" onclick="sendEmail()">Envoyer</button>
+
+            <!-- Infos de contact -->
+            <div class="contact-info">
+                <p>📞 Disponible 24h/24, 7j/7</p>
+                <p>📞 Téléphone : <a href="tel:0619923377">06 19 92 33 77</a></p>
+                <p>📧 Email : <a href="mailto:alexlivens09@gmail.com">alexlivens09@gmail.com</a></p>
+                <a href="mailto:alexlivens09@gmail.com?subject=Demande%20d%27aide&body=Bonjour,%0A%0AJe souhaite poser une question concernant..."></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ouvrir la boîte d'aide
+        function openHelp() {
+            document.getElementById("helpModal").style.display = "block";
+        }
+
+        // Fermer la boîte d'aide
+        function closeHelp() {
+            document.getElementById("helpModal").style.display = "none";
+        }
+
+        // Fermer si on clique en dehors de la boîte
+        window.onclick = function(event) {
+            let modal = document.getElementById("helpModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Fonction pour envoyer un email
+        function sendEmail() {
+            let userMessage = document.getElementById("userQuestion").value;
+
+            if (userMessage.trim() === "") {
+                alert("Veuillez entrer une question avant d'envoyer.");
+                return;
+            }
+
+            let email = "alexlivens09@gmail.com";
+            let subject = "Demande d'aide depuis le site";
+            let body = "Bonjour,\n\nVoici ma question :\n" + userMessage + "\n\nMerci d'avance !";
+
+            // Ouvre l'application mail avec la demande pré-remplie
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
+      
 
     <!-- Bouton Retour en haut -->
     <button id="back-to-top" onclick="scrollToTop()">↑</button>
