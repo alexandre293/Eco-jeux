@@ -1,3 +1,6 @@
+D'accord ! Voici le texte complet ajouté à la structure HTML que tu as donnée :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,8 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Éco-Challenge - Le Jeu de l'Écologie</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 
 <body>
@@ -18,15 +20,139 @@
         <a class="menuitem" href="#cases">📌 Les Cases du Jeu</a>
         <a class="menuitem" href="#regles">📜 Règle générale pour tous les joueurs</a>
         <a class="menuitem" href="#cartes">📄 Exemples de cartes</a>
-        <a class="menuitem" href="#victoire">🏆  Fin de la partie et victoire</a>
+        <a class="menuitem" href="#victoire">🏆 Fin de la partie et victoire</a>
         <a class="menuitem" href="#pourquoi">🎉 Pourquoi jouer ?</a>
         <a class="menuitem" href="#quizz">🌱 + 🌍 Quizz</a>
-        <a class="menuitem" href="#quizz">🚀✨ Prêt à relever le défi ?</a>
+        <a class="menuitem" href="#prêt">🚀✨ Prêt à relever le défi ?</a>
         <a class="menuitem" href="#aide">❓ Aide</a>
     </div>
-    
 
+    <div class="main">
+        <h1 id="main-title">Bienvenue dans l'Éco-Challenge 🌍🎲 !</h1>
+        <h2 id="bienvenue">Un jeu de plateau pour apprendre à protéger la planète et utiliser les ressources de manière responsable.</h2>
+        <p>🌍 Éco-Challenge : Le Jeu du recyclage et de l'écologie. 🎲</p>
+        <p>Bienvenue dans Éco-Challenge ! Ici, tu es le patron d’une entreprise et ton but est de protéger la planète tout en gagnant de l'argent. 🌱💰⭐ Le premier joueur à bien équilibrer écologie (🌱), budget (💰) et réputation (⭐) gagne la partie ! 🏆</p>
 
+        <h2 id="comment-jouer">🎯 Comment jouer ?</h2>
+        <p>1️⃣ Choisis ton entreprise 🏢</p>
+        <p>2️⃣ Reçois 30 💰, 20 ⭐, 40 🌱 pour commencer</p>
+        <p>3️⃣ Lance le dé (🎲 1 à 6) et avance sur le plateau</p>
+        <p>4️⃣ Suis les instructions de la case où tu tombes</p>
+        <p>5️⃣ Prends les bonnes décisions pour réussir !</p>
+
+        <h2 id="cases">📌 Les Cases du Jeu</h2>
+        <ul>
+            <li>🏢 <strong>Case Entreprise</strong><br><strong>Fonction :</strong> Permet d’acheter ou d’améliorer une entreprise en payant le coût indiqué.<br><strong>Impact :</strong> Cette case est essentielle pour développer ton entreprise et générer des ressources (argent, écologie, réputation) sur le long terme.</li>
+            <li>🎭 <strong>Case Spéciale</strong><br><strong>Fonction :</strong> Le joueur tire une carte événement ou défi, qui peut avoir un effet positif ou négatif sur ses ressources.<br><strong>Impact :</strong> Cette case introduit du hasard et des rebondissements dans la partie, obligeant à adapter sa stratégie en fonction des situations imprévues.</li>
+            <li>🚔 <strong>Case Prison</strong><br><strong>Fonction :</strong> Indique que ton entreprise a enfreint les règles environnementales. Pour en sortir, le joueur doit lancer un dé et obtenir un 3.<br><strong>Impact :</strong> En cas d’échec, le joueur doit payer 1 💰 avant d’avancer, ce qui pénalise financièrement et ralentit sa progression.</li>
+            <li>🪧 <strong>Case Manifestation</strong><br><strong>Fonction :</strong> Représente une protestation citoyenne contre les pratiques de ton entreprise.<br><strong>Impact :</strong> Le joueur subit une perte de 2 ⭐ ou peut choisir de modifier sa stratégie (perd 1 💰 et gagne 2 🌱), lui offrant ainsi un choix entre deux types de pénalités selon sa situation.</li>
+            <li>☠️ <strong>Case Pollution</strong><br><strong>Fonction :</strong> Indique que ton entreprise a un impact négatif sur l'environnement en polluant trop.<br><strong>Impact :</strong> Le joueur perd immédiatement 3 🌱 et 2 ⭐, pénalisant à la fois son score écologique et sa réputation, et l’encourageant à investir dans des pratiques plus durables.</li>
+            <li>💚 <strong>Case Prime Verte</strong><br><strong>Fonction :</strong> Récompense les actions écologiques et responsables de ton entreprise.<br><strong>Impact :</strong> Le joueur reçoit un bonus de 3 🌱 et 2 ⭐, ce qui renforce l'intérêt d'adopter des stratégies respectueuses de l'environnement.</li>
+            <li>🌬️ <strong>Case Réduction des Émissions</strong><br><strong>Fonction :</strong> Symbolise un investissement dans des technologies propres pour réduire les émissions de ton entreprise.<br><strong>Impact :</strong> Le joueur gagne 3 🌱 et 2 ⭐, illustrant les bénéfices de l'innovation et de la transition énergétique.</li>
+            <li>💡 <strong>Case Pénurie de Ressources</strong><br><strong>Fonction :</strong> Représente une situation où la production est ralentie en raison d'une pénurie de matières premières ou d'énergie.<br><strong>Impact :</strong> Le joueur perd 2 💰, mais gagne 1 🌱, indiquant qu'une production réduite peut avoir un effet positif sur l'environnement, même si elle est coûteuse.</li>
+            <li>🤝 <strong>Case Partenariat Local</strong><br><strong>Fonction :</strong> Encourage la coopération en formant une alliance avec une entreprise locale éco-responsable.<br><strong>Impact :</strong> Le joueur gagne 2 🌱 et 1 ⭐, reflétant les avantages d’un réseau local solide et d’initiatives collaboratives pour une économie durable.</li>
+            <li>🔬 <strong>Case Recherche et Innovation</strong><br><strong>Fonction :</strong> Permet de tenter de découvrir une innovation écologique.<br><strong>Mécanisme :</strong> Le joueur lance un dé : En obtenant 4, 5 ou 6, il réussit et gagne 4 🌱 et 1 ⭐. Sinon, il ne reçoit aucun bonus.</li>
+        </ul>
+
+        <h2 id="maire">Case du Maire 🏛️</h2>
+        <ul>
+            <li><strong>Devenir Maire :</strong> Pour devenir Maire, il faut être le premier joueur à terminer le premier tour complet du plateau. Le joueur qui y parvient gagne immédiatement le titre de Maire et peut nommer sa ville, ajoutant une touche personnelle à la partie.</li>
+            <li><strong>Bonus du Maire :</strong> À partir du tour suivant, chaque fois que le Maire termine un tour complet, il reçoit automatiquement :</li>
+            <ul>
+                <li>2 🌱 (points écologiques)</li>
+                <li>2 💰 (argent)</li>
+                <li>2 ⭐ (points de réputation)</li>
+            </ul>
+            <li><strong>Immunité Prison pour le Maire :</strong> Si le Maire doit normalement atterrir sur la case Prison, il l’évite et avance normalement sans pénalité.</li>
+        </ul>
+
+        <h2 id="regles">📜 Règle générale pour tous les joueurs</h2>
+        <p>À chaque fois qu'un joueur termine son tour complet sur le plateau, il gagne automatiquement :</p>
+        <ul>
+            <li>2 🌱 (points écologiques)</li>
+            <li>2 💰 (eco-argent)</li>
+            <li>2 ⭐ (points de réputation)</li>
+        </ul>
+
+        <h2 id="cartes">📄 Exemples de cartes</h2>
+        <h3>🌱 Cartes Défi</h3>
+        <ul>
+            <li>Utiliser moins de déchets et recycler ? <br> ✅ Oui : +3 🌱, -2 💰 <br> ❌ Non : -2 🌱, +1 💰</li>
+            <li>Investir dans un atelier de réparation ? 🛠️ <br> 🛠️ Oui : +2 🌱, -3 💰, +1 ⭐ <br> 🚮 Non : -1 🌱</li>
+            <li>Réutiliser des matériaux recyclés ? ♻️ <br> ✅ Oui : +3 🌱, -2 💰 <br> ❌ Non : +2 💰, -1 🌱</li>
+        </ul>
+
+        <h3>⚡ Cartes Événement</h3>
+        <ul>
+            <li>Nouvelle loi anti-gaspillage : <br> 🔄 Adapter l’entreprise : -3 💰, +4 🌱 <br> 💸 Payer une amende : -2 💰, -1 🌱</li>
+            <li>Une super innovation verte arrive ! 🚀 <br> Investir : -4 💰, +5 🌱, +2 ⭐ <br> Ne rien faire : -1 ⭐</li>
+            <li>Le gouvernement fait une campagne écologique : 📢 <br> Participer : +3 ⭐, -2 💰 <br> Ignorer : -2 ⭐</li>
+        </ul>
+
+        <h3>🎁 Cartes Bonus</h3>
+        <ul>
+            <li>✅ Subvention écolo : +3 💰</li>
+            <li>✅ Partenariat avec une startup verte : +4 🌱, +2 ⭐</li>
+            <li>✅ Médaille entreprise responsable : +5 ⭐</li>
+            <li>✅ Nouveau système de recyclage : +3 🌱</li>
+            <li>✅ Fidélisation des clients engagés : +2 ⭐, +2 💰</li>
+        </ul>
+
+        <h3>🚨 Cartes Malus</h3>
+        <ul>
+            <li>❌ Scandale écologique : -5 ⭐</li>
+            <li>❌ Pollution détectée : -3 🌱, -2 ⭐</li>
+            <li>❌ Retard dans les normes : -4 🌱</li>
+            <li>❌ Augmentation du prix des matières premières : -3 💰</li>
+            <li>❌ Greenwashing détecté : -3 ⭐</li>
+        </ul>
+
+        <h2 id="quizz">🌱 + 🌍 Quizz</h2>
+        <p>Facile : ♻️ Moyen : 🌍 Difficile :</p>
+
+        <h2 id="victoire">🏆 Fin de la partie et victoire</h2>
+        <p>🎯 Le premier joueur qui atteint ces objectifs remporte la partie !</p>
+        <ul>
+            <li>✅ 50 feuilles 🌱 (pour l'écologie)</li>
+            <li>✅ 35 étoiles ⭐ (pour la réputation)</li>
+            <li>✅ 10 pièces 💰 (eco-argent)</li>
+        </ul>
+
+        <h2 id="pourquoi">🎉 Pourquoi jouer à Éco-Challenge ?</h2>
+        <ul>
+            <li>🔹 Apprendre à protéger la planète 🌍</li>
+            <li>🔹 Gérer une entreprise comme un vrai patron 💼</li>
+            <li>🔹 S’amuser tout en réfléchissant 🤩</li>
+        </ul>
+
+        <p>Prêt à relever le défi ? 🚀✨</p>
+    </div>
+
+    <!-- Bouton Retour en haut -->
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Afficher le bouton "Retour en haut" quand l'utilisateur fait défiler la page
+        window.onscroll = function () {
+            let button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Fonction pour revenir en haut de la page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
+
+
+
