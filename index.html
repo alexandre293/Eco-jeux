@@ -13,7 +13,7 @@
 
     <div class="menu">
         <a class="menuitem" href="#bienvenue">🌍 Éco-Challenge</a>
-        <a class="menuitem" href="#Combien">  🤔 Combien contient le plateau de cases ? </a>
+        <a class="menuitem" href="#Combien"> 🤔 Combien contient le plateau de cases ? </a>
         <a class="menuitem" href="#comment-jouer">🎯 Comment jouer ?</a>
         <a class="menuitem" href="#cases">📌 Les Cases du Jeu</a>
         <a class="menuitem" href="#regles">📜 Règle générale pour tous les joueurs</a>
@@ -25,47 +25,80 @@
         <a class="menuitem" href="#aide">❓ Aide</a>
     </div>
 
-    <div class="main">
+    <div class="eco-challenge-container">
         <h1>Bienvenue dans l'Éco-Challenge 🌍🎲 !</h1>
-        <h2 id="bienvenue">Un jeu de plateau pour apprendre à protéger la planète et utiliser les ressources de manière
-            responsable.</h2>
-        <p>🌍 Éco-Challenge : Le Jeu du recyclage et de l'écologie. 🎲</p>
-        <p>Bienvenue dans Éco-Challenge ! Ici, tu es le patron d’une entreprise et ton but est de protéger la planète
-            tout en gagnant de l'argent. 🌱💰⭐ Le premier joueur à bien équilibrer écologie (🌱), budget (💰) et
-            réputation (⭐) gagne la partie ! </p>
-
-        <h2 id="comment-jouer">🎯 Comment jouer ?</h2>
-        <p>1️⃣ Choisis ton entreprise 🏢</p>
-        <p>2️⃣ Reçois 30 💰, 20 ⭐, 40 🌱 pour commencer</p>
-        <p>3️⃣ Lance le dé (🎲 1 à 6) et avance sur le plateau</p>
-        <p>4️⃣ Suis les instructions de la case où tu tombes</p>
-        <p>5️⃣ Prends les bonnes décisions pour réussir !</p>
-
-        <h2 id="Combien">🤔 Combien contient le plateau de cases ? </h2>
-        <p>Le plateau contient 31 cases.</p>
-
+        <h2 id="bienvenue">Un jeu de plateau Et de Jeux Video pour apprendre à protéger la planète et utiliser les ressources de manière responsable.</h2>
+        <p class="description">🌍 Éco-Challenge : Le Jeu du recyclage et de l'écologie. 🎲</p>
+        <p class="intro">
+            Bienvenue dans Éco-Challenge ! Ici, tu es le patron d’une entreprise et ton but est de protéger la planète
+            tout en gagnant de l'argent. 🌱💰⭐ Le premier joueur à bien équilibrer écologie (🌱), budget (💰) et réputation (⭐) gagne la partie !
+        </p>
+    
+        <div class="game-info">
+            <h2 id="comment-jouer">🎯 Comment jouer ?</h2>
+            <ol class="game-steps">
+                <li>1️⃣ Choisis ton entreprise 🏢</li>
+                <li>2️⃣ Reçois 30 💰, 20 ⭐, 40 🌱 pour commencer</li>
+                <li>3️⃣ Lance le dé (🎲 1 à 6) et avance sur le plateau</li>
+                <li>4️⃣ Suis les instructions de la case où tu tombes</li>
+                <li>5️⃣ Prends les bonnes décisions pour réussir !</li>
+            </ol>
+    
+            <h2 id="Combien">🤔 Combien contient le plateau de cases ?</h2>
+            <p class="board-info">Le plateau contient 31 cases.</p>
+        </div>
+    </div>
+    
+    
         <h2 id="cases">📌 Les Cases du Jeu</h2>
         <ul>
             <li>🏞️ <strong>Case Vide </strong><br><strong>Fonction :</strong> : Si un joueur atterrit sur cette case,
                 il peut relancer le dé sans aucune pénalité.
-                <br><strong>Impact :</strong> Cela offre une chance supplémentaire au joueur d'avancer, ce qui peut être stratégique pour rattraper d'autres joueurs ou échapper à une situation difficile
+                <br><strong>Impact :</strong> Cela offre une chance supplémentaire au joueur d'avancer, ce qui peut être
+                stratégique pour rattraper d'autres joueurs ou échapper à une situation difficile
             </li>
+
+            <li>🏢 <strong>Case Entreprise</strong><br><strong>Fonction :</strong> : Permet d’acheter ou d’améliorer une
+                entreprise en payant le coût indiqué.
+                <br><strong>Impact :</strong> Cette case est essentielle pour développer ton entreprise et générer des
+                ressources (argent, écologie, réputation) sur le long terme. <br>
+                <strong>Comment fonctionne cette case ? :</strong>
+                - Si vous faites un 1, vous choisissez l'offre Niveau 1 (Les Plus Riches), qui représente les
+                entreprises les plus prospères. Une fois que vous avez ce niveau, vous pouvez acheter l'entreprise que
+                vous souhaitez, bien sûr parmi celles de ce niveau.
+                - Si vous faites un 2, vous choisissez l'offre Niveau 2 (Entreprises Intermédiaires), qui offre un bon
+                équilibre entre avantages et coûts. Vous pouvez également acheter une entreprise de ce niveau.
+                - Si vous faites un 3, vous choisissez l'offre Niveau 3 (Entreprises Moins Riches), qui a des ressources
+                limitées mais peut encore être compétitive. Vous pouvez acheter une entreprise de ce niveau.
+                - Si vous faites un 4, vous choisissez l'offre Niveau 4 (Petites Éco-Entreprises), qui se concentre sur
+                des initiatives durables et de petite taille. Vous pouvez acheter une entreprise de ce niveau.
+
+            </li>
+
             <li>🎭 <strong>Case Spéciale</strong><br><strong>Fonction :</strong> Le joueur tire une carte événement ou
                 défi, qui peut avoir un effet positif ou négatif sur ses ressources.<br><strong>Impact :</strong> Cette
                 case introduit du hasard et des rebondissements dans la partie, obligeant à adapter sa stratégie en
-                fonction des situations imprévues.</li>
+                fonction des situations imprévues.<br>
+                <strong>Comment fonctionne cette case ? :</strong> - Si vous faites un 1, vous tirez une carte
+                événement. - Si vous faites un 2, vous tirez une carte malus.- Si vous faites un 3, vous tirez une carte
+                défi.- Si vous faites un 4, vous tirez une carte bonus.
+            </li>
+
             <li>🚔 <strong>Case Prison</strong><br><strong>Fonction :</strong> Indique que ton entreprise a enfreint les
                 règles environnementales. Pour en sortir, le joueur doit lancer un dé et obtenir un 3.<br><strong>Impact
                     :</strong> En cas d’échec, le joueur doit payer 1 💰 avant d’avancer, ce qui pénalise financièrement
                 et ralentit sa progression.</li>
+
             <li>🪧 <strong>Case Manifestation</strong><br><strong>Fonction :</strong> Représente une protestation
                 citoyenne contre les pratiques de ton entreprise.<br><strong>Impact :</strong> Le joueur subit une perte
                 de 2 ⭐ ou peut choisir de modifier sa stratégie (perd 1 💰 et gagne 2 🌱), lui offrant ainsi un choix
                 entre deux types de pénalités selon sa situation.</li>
+
             <li>☠️ <strong>Case Pollution</strong><br><strong>Fonction :</strong> Indique que ton entreprise a un impact
                 négatif sur l'environnement en polluant trop.<br><strong>Impact :</strong> Le joueur perd immédiatement
                 3 🌱 et 2 ⭐, pénalisant à la fois son score écologique et sa réputation, et l’encourageant à investir
                 dans des pratiques plus durables.</li>
+
             <li>💚 <strong>Case Prime Verte</strong><br><strong>Fonction :</strong> Récompense les actions écologiques
                 et responsables de ton entreprise.<br><strong>Impact :</strong> Le joueur reçoit un bonus de 3 🌱 et 2
                 ⭐, ce qui renforce l'intérêt d'adopter des stratégies respectueuses de l'environnement.</li>
@@ -73,6 +106,7 @@
                 investissement dans des technologies propres pour réduire les émissions de ton
                 entreprise.<br><strong>Impact :</strong> Le joueur gagne 3 🌱 et 2 ⭐, illustrant les bénéfices de
                 l'innovation et de la transition énergétique.</li>
+
             <li>💡 <strong>Case Pénurie de Ressources</strong><br><strong>Fonction :</strong> Représente une situation
                 où la production est ralentie en raison d'une pénurie de matières premières ou
                 d'énergie.<br><strong>Impact :</strong> Le joueur perd 2 💰, mais gagne 1 🌱, indiquant qu'une
@@ -81,6 +115,7 @@
                 formant une alliance avec une entreprise locale éco-responsable.<br><strong>Impact :</strong> Le joueur
                 gagne 2 🌱 et 1 ⭐, reflétant les avantages d’un réseau local solide et d’initiatives collaboratives pour
                 une économie durable.</li>
+
             <li>🔬 <strong>Case Recherche et Innovation</strong><br><strong>Fonction :</strong> Permet de tenter de
                 découvrir une innovation écologique.<br><strong>Mécanisme :</strong> Le joueur lance un dé : En obtenant
                 4, 5 ou 6, il réussit et gagne 4 🌱 et 1 ⭐. Sinon, il ne reçoit aucun bonus.</li>
@@ -144,10 +179,17 @@
             <li>❌ Greenwashing détecté : -3 ⭐</li>
         </ul>
 
-        <h2 id="quizz">🌱 + 🌍 Quizz</h2>
-        <p>Facile : ♻️ Moyen : 🌍 Difficile :</p>
-        <a href="https://alexandre293.github.io/Quizz--co/">CLique ici</a>
-
+        <section class="quiz-container">
+            <h2 id="quizz">🌱 + 🌍 Quizz</h2>
+            <p class="quiz-text">
+                <span class="difficulty easy">Facile : ♻️</span> 
+                <span class="difficulty medium">Moyen : 🌍</span> 
+                <span class="difficulty hard">Difficile : 🔥</span>
+            </p>
+            <a href="https://alexandre293.github.io/Quizz--co/" class="quiz-link">✨ Commencer le Quizz ✨</a>
+        </section>
+        
+        
         <h2 id="victoire">🏆 Fin de la partie et victoire</h2>
         <p>🎯 Le premier joueur qui atteint ces objectifs remporte la partie !</p>
         <ul>
@@ -163,9 +205,16 @@
             <li>🔹 S’amuser tout en réfléchissant 🤩</li>
         </ul>
 
-        <p id="prêt">Prêt à relever le défi ? 🚀✨</p>
-    </div>
-
+        <div class="eco-challenge-container">
+            <h1>Prêt à relever le défi ? 🚀✨</h1>
+            <p class="intro">Choisis ton aventure : jeu vidéo ou jeu de plateau. À toi de jouer !</p>
+            
+            <div class="game-options">
+                <a href="lien-vers-jeu-video" class="game-link video-link">Jeu Vidéo</a>
+                <a href="lien-vers-jeu-plateau" class="game-link board-link">Jeu de Plateau</a>
+            </div>
+        </div>
+        
     <!-- Bouton pour ouvrir la boîte d'aide -->
     <button class="help-btn" onclick="openHelp()" id="aide">Aide</button>
 
@@ -231,26 +280,22 @@
     </script>
 
 
-    <!-- Bouton Retour en haut -->
-    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+    <button id="topButton" onclick="scrollToTop()">🔝</button>
 
     <script>
-        // Afficher le bouton "Retour en haut" quand l'utilisateur fait défiler la page
-        window.onscroll = function () {
-            let button = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+       // Affiche le bouton quand on descend
+       window.onscroll = function() {
+            let button = document.getElementById("topButton");
+            if (document.documentElement.scrollTop > 300) {
                 button.style.display = "block";
             } else {
                 button.style.display = "none";
             }
         };
 
-        // Fonction pour revenir en haut de la page
+        // Fonction pour remonter en haut
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
