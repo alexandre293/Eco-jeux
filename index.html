@@ -248,11 +248,14 @@
             <h2>Bonjour, comment puis-je vous aider ? 🤔</h2>
             <p>Écrivez votre demande ci-dessous :</p>
 
-            <!-- Champ de texte -->
-            <textarea id="userQuestion" placeholder="Tapez votre question ici..."></textarea>
+            <div class="form-wrapper">
+                <!-- Champ de texte -->
+                <textarea id="userQuestion" placeholder="Tapez votre question ici..."></textarea>
 
-            <!-- Bouton Envoyer -->
-            <button class="send-btn" onclick="sendEmail()">Envoyer</button>
+                <!-- Bouton Envoyer -->
+                <button class="send-btn" onclick="sendEmail()">Envoyer</button>
+            </div>
+
 
             <!-- Infos de contact -->
             <div class="contact-info">
@@ -266,6 +269,11 @@
     </div>
 
     <button id="topButton" onclick="scrollToTop()">🔝</button>
+
+    <footer>
+        <p>&copy; 2025 Eco-Challenge. Tous droits réservés.</p>
+    </footer>
+
 
 
     <script src="script.js"></script>

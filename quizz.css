@@ -5,7 +5,8 @@ body {
     /* Fond vert */
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -93,10 +94,7 @@ button[type="submit"]:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+
     z-index: 1000;
 }
 
