@@ -194,3 +194,27 @@ button:active {
     transform: translateY(3px) scale(1);
     box-shadow: none;
 }
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #e3fc8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    /* Caché au début */
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
