@@ -696,8 +696,6 @@ p.intro {
         text-align: center;
         padding: 20px 10px;
         margin: 0;
-        color: #333;
-        /* background-color retiré pour ne plus avoir le fond blanc */
     }
 
     .menu {
@@ -722,6 +720,21 @@ p.intro {
         margin: 20px auto;
         width: 90%;
         padding: 10px;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    p, ul {
+        line-height: 1.3;
+    }
+
+    h2 {
+        margin-top: 0vh;
+        margin-bottom: 2vh;
+        font-size: 1.8rem;
+
     }
 
     .menuitem:hover {
