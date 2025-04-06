@@ -1,115 +1,108 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
     function setupQuiz({ formId, resultContainerId, correctAnswers, correctTextAnswers, scorePrefix }) {
         const form = document.getElementById(formId);
+        const resultContainer = document.getElementById(resultContainerId);
+        if (!form || !resultContainer) return;
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             let score = 0;
-            Object.keys(correctAnswers).forEach(question => {
+            const feedback = [];
+
+            for (const question in correctAnswers) {
                 const selected = form.querySelector(`input[name="${question}"]:checked`);
-                if (selected && selected.value === correctAnswers[question]) {
-                    score++;
-                }
-            });
+                const isCorrect = selected && selected.value === correctAnswers[question];
+                const userAnswer = selected ? selected.value : "aucune réponse";
+                if (isCorrect) score++;
 
-            let output = `
-                <div class="result-card">
-                    <h2>${scorePrefix} : <span class="score">${score}/10</span></h2>
-                    <h3>✅ Bonnes réponses :</h3>
-                    <div class="result-table">
-                        <div class="result-row">
-                            <div class="result-column"><strong>Question</strong></div>
-                            <div class="result-column"><strong>Réponse correcte</strong></div>
-                        </div>`;
+                feedback.push({
+                    question,
+                    isCorrect,
+                    userAnswer,
+                    correctText: correctTextAnswers[question]
+                });
+            }
 
-            Object.keys(correctTextAnswers).forEach(question => {
-                let num = question.substring(1);
-                output += `
-                    <div class="result-row">
-                        <div class="result-column">Question ${num}</div>
-                        <div class="result-column">${correctTextAnswers[question]}</div>
-                    </div>`;
-            });
-            output += `</div></div>`;
-
-            const resultContainer = document.getElementById(resultContainerId);
-            resultContainer.innerHTML = output;
+            resultContainer.innerHTML = generateResultHTML(score, feedback, scorePrefix);
             resultContainer.classList.add('fadeIn');
 
-            if (score === 10) {
+            if (score === Object.keys(correctAnswers).length) {
                 launchFireworks();
             }
 
-            form.reset();
+            // Pas de reset automatique
         });
+    }
+
+    function generateResultHTML(score, feedback, scorePrefix) {
+        const total = feedback.length;
+        const isPerfect = score === total;
+
+        const scoreStyle = isPerfect
+            ? 'font-size: 42px; color: #4CAF50; text-shadow: 0 0 10px gold; font-weight: bold; animation: boom 1s ease-in-out;'
+            : 'font-size: 32px; color: goldenrod;';
+
+        const title = isPerfect
+            ? '⚡ BOUM ! 10/10 ! Tu viens de sauver la planète avec style. Rejoins la ligue des héros verts ! 💚🦸'
+            : '📊 Résultat détaillé';
+
+        // Ajout animation si elle n'existe pas déjà
+        if (isPerfect && !document.getElementById('boom-style')) {
+            const style = document.createElement('style');
+            style.id = 'boom-style';
+            style.innerHTML = `
+                @keyframes boom {
+                    0% { transform: scale(0.5); opacity: 0; }
+                    60% { transform: scale(1.2); opacity: 1; }
+                    100% { transform: scale(1); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        let html = `
+            <div style="max-width: 750px; margin: 30px auto; padding: 25px; text-align: center; background: #f9f9f9; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                <h2 style="${scoreStyle}">${scorePrefix} : ${score}/${total}</h2>
+                <h3 style="margin-bottom: 30px; font-size: 20px;">${title}</h3>
+                <div style="display: flex; flex-direction: column; gap: 20px;">`;
+
+        feedback.forEach(({ question, isCorrect, userAnswer, correctText }) => {
+            const qNum = question.replace('q', '');
+            const bg = isCorrect ? '#e8f5e9' : '#ffebee';
+            const border = isCorrect ? '#4caf50' : '#f44336';
+            const emoji = isCorrect ? '✅' : '❌';
+            const displayUser = userAnswer === "aucune réponse" ? "Pas de réponse" : userAnswer;
+            const content = isCorrect
+                ? `<strong>${emoji} Ta réponse :</strong> ${correctText}`
+                : `<strong>${emoji} Ta réponse :</strong> ${displayUser}<br><strong>✅ Bonne réponse :</strong> ${correctText}`;
+
+            html += `
+                <div style="background: ${bg}; padding: 15px; border-left: 6px solid ${border}; border-radius: 10px; text-align: left;">
+                    <h4 style="margin-bottom: 10px;">Question ${qNum}</h4>
+                    <p style="margin: 0;">${content}</p>
+                </div>`;
+        });
+
+        html += `</div></div>`;
+        return html;
     }
 
     function launchFireworks() {
         const fireworks = document.createElement('div');
-        fireworks.classList.add('fireworks');
+        fireworks.className = 'fireworks';
+        fireworks.style.position = 'fixed';
+        fireworks.style.top = '0';
+        fireworks.style.left = '0';
+        fireworks.style.width = '100vw';
+        fireworks.style.height = '100vh';
+        fireworks.style.background = "url('https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif') center/cover no-repeat";
+        fireworks.style.zIndex = '9999';
+        fireworks.style.pointerEvents = 'none';
         document.body.appendChild(fireworks);
-        setTimeout(() => {
-            fireworks.remove();
-        }, 3000);
+        setTimeout(() => fireworks.remove(), 3000);
     }
 
-    const styles = `
-        .result-card {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 50%;
-            margin: 20px auto;
-        }
-        .score {
-            font-size: 24px;
-            font-weight: bold;
-            color: yellow;
-        }
-        .result-table {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            width: 100%;
-            text-align: left;
-        }
-        .result-row {
-            display: flex;
-            justify-content: space-between;
-            margin: 5px 0;
-        }
-        .result-column {
-            width: 45%;
-            padding: 5px;
-            border: 1px solid white;
-            margin: 2px;
-        }
-        .fadeIn {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .fireworks {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw;
-            height: 100vh;
-            background: url('https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif') center/cover no-repeat;
-            z-index: 9999;
-            pointer-events: none;
-        }
-    `;
-    const styleSheet = document.createElement("style");
-    styleSheet.innerText = styles;
-    document.head.appendChild(styleSheet);
-
-    // Niveau Facile
+    // Quiz Facile
     setupQuiz({
         formId: 'formFacile',
         resultContainerId: 'resultContainerFacile',
@@ -132,7 +125,7 @@
         scorePrefix: '🌱 Score'
     });
 
-    // Niveau Moyen
+    // Quiz Moyen
     setupQuiz({
         formId: 'formMoyen',
         resultContainerId: 'resultContainerMoyen',
@@ -155,7 +148,7 @@
         scorePrefix: '🌱 Score'
     });
 
-    // Niveau Difficile
+    // Quiz Difficile
     setupQuiz({
         formId: 'formDifficile',
         resultContainerId: 'resultContainerDifficile',
@@ -177,20 +170,4 @@
         },
         scorePrefix: '🌍 Score'
     });
-})();
-
-
-// Fonction pour revenir en haut
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Affiche le bouton lorsque l'utilisateur descend
-window.onscroll = function() {
-    var button = document.getElementById("topButton");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        button.style.display = "block"; // Affiche le bouton
-    } else {
-        button.style.display = "none"; // Cache le bouton
-    }
-};
+});

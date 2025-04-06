@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root {
+    --bg:rgb(217, 241, 194);
+    --primary-color: green;
+}
+
 /* Style général */
 * {
     margin: 0;
@@ -116,6 +121,8 @@ header:hover {
         opacity: 1;
         transform: translateX(0);
     }
+
+   
 }
 
 /* Titres */
@@ -737,9 +744,22 @@ p.intro {
 
     }
 
+    .combien-header {
+        font-size: 1.4rem;
+    }
+
     .menuitem:hover {
         background-color: #ddd;
     }
+
+    .les-cases-du-jeu  {
+        width: 95%;
+    }
+
+    #quizz {
+        font-size: 1.7rem;
+    }
+
 }
 
 footer {
@@ -756,4 +776,18 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+}
+
+/* Для всех скроллбаров на сайте */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
 }
