@@ -170,4 +170,20 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         scorePrefix: '🌍 Score'
     });
+
+    // Affiche le bouton quand on descend
+    window.onscroll = function () {
+        let button = document.getElementById("topButton");
+        if (document.documentElement.scrollTop > 300) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
 });
+
+// Fonction pour remonter en haut
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

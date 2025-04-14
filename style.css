@@ -403,21 +403,6 @@ body:hover .bg {
     transform: translateY(-10px);
 }
 
-
-#topButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: #e3fc8a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-    /* Caché au début */
-}
-
 /* Conteneur principal du quizz */
 .quiz-container {
     text-align: center;
@@ -758,6 +743,10 @@ p.intro {
 
     #quizz {
         font-size: 1.7rem;
+    }
+
+    .quiz-container {
+        width: 90%;
     }
 
 }

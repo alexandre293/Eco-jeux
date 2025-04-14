@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Éco-Challenge - Le Jeu de l'Écologie</title>
+    <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -49,6 +51,16 @@
 
             <h2 id="Combien" class="combien-header">🤔 Combien contient le plateau de cases ?</h2>
             <p class="board-info">Le plateau contient 24 cases.</p>
+
+            <h2 id="Combien" class="combien-header">👉 Quel est le nombre maximum de personnes pouvant jouer ?</h2>
+            <p class="board-info">Le jeu se joue à 5 personnes : 4 joueurs actifs et 1 personne chargée de gérer la
+                banque et les règles.</p>
+            <li>💰 Gérer la banque : distribuer et récupérer les ressources (💰, 🌱, ⭐)</li>
+            <li>🏢 Donner les cartes entreprises et améliorations</li>
+            <li>📦 Garder les cartes dans une boîte spéciale appelée “Banque”</li>
+            <li>📏 Surveiller le bon respect des règles du jeu</li>
+            <li>🧾 Aider les joueurs en cas de doute ou de conflit</li>
+            <p>🎯 On l'appelle "Maître du jeu".</p>
         </div>
     </div>
 
@@ -204,22 +216,24 @@
     </ul>
 
     <section class="quiz-container">
-        <h2 id="quiz">🌱 + 🌍 Quizz</h2>
+        <h2 id="quiz">🌱 + 🌍 Quiz</h2>
         <p class="quiz-text">
             <span class="difficulty easy">Facile : ♻️</span>
             <span class="difficulty medium">Moyen : 🌍</span>
             <span class="difficulty hard">Difficile : 🔥</span>
         </p>
-        <a href="quizz.html" class="quiz-link">✨ Commencer le Quizz ✨</a>
+        <a href="quizz.html" class="quiz-link">✨ Commencer le Quiz ✨</a>
     </section>
 
 
     <h2 id="victoire">🏆 Fin de la partie et victoire</h2>
-    <p>🎯 Le premier joueur qui atteint ces objectifs remporte la partie !</p>
+    <p>Dès qu’un joueur atteint les 3 objectifs suivants :</p>
     <ul class="les-cases-du-jeu">
         <li>✅ 50 feuilles 🌱 (pour l'écologie)</li>
         <li>✅ 35 étoiles ⭐ (pour la réputation)</li>
         <li>✅ 10 pièces 💰 (eco-argent)</li>
+        <p>🎯 Il remporte immédiatement la partie. Les autres joueurs ne peuvent plus jouer, même si c’est encore leur
+            tour.</p>
     </ul>
 
     <h2 id="pourquoi">🎉 Pourquoi jouer à Éco-Challenge ?</h2>
@@ -231,8 +245,10 @@
 
     <div class="eco-challenge-container" class="game-options" div id="Vidéo">
         <h1> 📽️ Vous avez la possibilité de choisir entre deux formats de vidéo :</h1>
-        <a href="https://youtu.be/Bktltujt5Uk?si=XjjfEEswK9pKh7N6" class="game-link video-link">une version courte ⏱️</a>
-        <a href="https://youtu.be/vGHcuKq7gVg?si=aA-G9_A0eZUrDhCY" class="game-link board-link"> une version longue 🕰️</a>
+        <a href="https://youtu.be/Bktltujt5Uk?si=XjjfEEswK9pKh7N6" class="game-link video-link">une version courte
+            ⏱️</a>
+        <a href="https://youtu.be/vGHcuKq7gVg?si=aA-G9_A0eZUrDhCY" class="game-link board-link"> une version longue
+            🕰️</a>
     </div>
 
     <div id="prêt" class="eco-challenge-container">
@@ -280,8 +296,6 @@
     <footer>
         <p>&copy; 2025 Eco-Challenge. Tous droits réservés.</p>
     </footer>
-
-
 
     <script src="script.js"></script>
 </body>
