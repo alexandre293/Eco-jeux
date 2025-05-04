@@ -679,6 +679,48 @@ p.intro {
     transition: transform 0.3s
 }
 
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Для всех скроллбаров на сайте */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+img {
+    max-width: 35%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
 /* Pour les appareils mobiles */
     @media screen and (max-width: 768px) {
     h1 {
@@ -750,8 +792,9 @@ p.intro {
         width: 90%;
     }
 
-    .img {
-        max-width: 100%;
+    img {
+        width: 100%;
+        max-width: 90%;
         height: auto;
         display: block;
         margin: 15px auto;
@@ -762,42 +805,3 @@ p.intro {
 
 }
 
-footer {
-    background-color: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
-    font-size: 0.9rem;
-}
-
-.form-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Для всех скроллбаров на сайте */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 4px;
-}
-
-img {
-    max-width: 35%;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
