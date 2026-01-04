@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achat du jeux</title>
+</head>
+<body>
+    <section id="eco-challenge-versions">
+  <h2>🌍 Éco‑Challenge ♻️ — Un jeu, trois façons de jouer !</h2>
+  <p>
+    Bienvenue dans l’univers d’<strong>Éco‑Challenge</strong>, un jeu de société original et engagé où chaque décision influence ton entreprise… et la planète ! 💚
+  </p>
+  <p>
+    Que tu sois un joueur passionné, un amateur curieux ou un adepte du "fait-maison", nous avons pensé à tout.
+  </p>
+  <p>
+    Découvre nos <strong>3 versions</strong> du jeu, adaptées à tous les profils et à tous les budgets :
+  </p>
+  <ul>
+    <li>🟢 Une édition complète avec tout le matériel inclus, prête à jouer dès l’ouverture</li>
+    <li>🌿 Une version essentielle pour ceux qui ont déjà des pions ou dés à la maison</li>
+    <li>🖨️ Une édition imprimable pour jouer rapidement et écologiquement, sans rien commander</li>
+  </ul>
+  <p>💡 Toutes les versions partagent le même plateau, les mêmes cartes et les mêmes règles : seule la manière de jouer change !</p>
+
+  <hr/>
+
+  <h3>🟢 1. Édition Complète – <em>Pack Premium</em></h3>
+  <p><strong>💰🌱⭐ Tout le jeu prêt à l’emploi</strong><br/>Prix : <strong>29,99 €</strong></p>
+  <ul>
+    <li>🧩 Le grand plateau de jeu cartonné (980 × 550 mm)</li>
+    <li>🃏 Toutes les cartes officielles (Événement, Bonus, Défi, Malus, Entreprises…)</li>
+    <li>🔘 30 jetons d’argent (💰), 20 jetons d’étoiles (⭐), 40 jetons d’écologie (🌱)</li>
+    <li>🎲 Un dé (1 à 6) et des pions</li>
+    <li>📱 Un QR code pour consulter les règles en ligne</li>
+    <li>📦 Une boîte de rangement design Éco‑Challenge</li>
+  </ul>
+  <p>✅ Idéal pour jouer directement entre amis ou en famille, sans rien préparer !</p>
+
+  <hr/>
+
+  <h3>🌿 2. Édition Essentielle – <em>Plateau & Cartes</em></h3>
+  <p><strong>♻️ Le cœur du jeu, sans les accessoires</strong><br/>Prix : <strong>14,99 €</strong></p>
+  <ul>
+    <li>🧩 Le plateau de jeu cartonné (980 × 550 mm)</li>
+    <li>🃏 Toutes les cartes du jeu</li>
+    <li>📱 Un QR code vers le règlement en ligne</li>
+    <li>📦 Une boîte de rangement compacte</li>
+    <li>🚫 Sans dés, ni jetons, ni pions</li>
+  </ul>
+  <p>✅ Parfait si tu as déjà du matériel chez toi !</p>
+
+  <hr/>
+
+  <h3>🖨️ 3. Édition Imprimable – <em>Version DIY</em></h3>
+  <p><strong>🖨️🌍 À imprimer chez soi, petit prix, grand impact</strong><br/>Prix : <strong>9,99 €</strong></p>
+  <ul>
+    <li>📄 Le plateau de jeu divisé en 4 feuilles A4 à imprimer et assembler</li>
+    <li>✂️ Toutes les cartes prêtes à imprimer (format Monopoly 56 × 87 mm)</li>
+    <li>📘 Le règlement du jeu en PDF</li>
+  </ul>
+  <p>✅ Idéal pour les écoles, les animations ou un usage rapide et économique.<br/>
+  💡 Possibilité d’imprimer à la maison ou en boutique.</p>
+
+  <hr/>
+
+  <h4>🔗 Accès au règlement</h4>
+  <p>📱 Scanne le QR code sur ta boîte ou ton fichier PDF pour accéder directement au règlement en ligne.</p>
+</section>
+
+</body>
+</html>
