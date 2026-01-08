@@ -48,3 +48,15 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+const helpToggle = document.getElementById("helpToggle");
+const helpPanel = document.getElementById("helpPanel");
+const helpClose = document.getElementById("helpClose");
+
+helpToggle.addEventListener("click", () => {
+    helpPanel.classList.add("active");
+});
+
+helpClose.addEventListener("click", () => {
+    helpPanel.classList.remove("active");
+});
+
